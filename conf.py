@@ -24,7 +24,7 @@ import imp
 
 # -- Read important params from environment
 
-f = open('./version.conf')
+f = open('../version.conf')
 global ddict_conf
 ddict_conf = imp.load_source('ddict_conf', '', f)
 f.close()
@@ -345,4 +345,3 @@ numfig = True
 def setup(app):
 #   app.add_javascript("custom.js")
    app.add_stylesheet("custom.css")
-
