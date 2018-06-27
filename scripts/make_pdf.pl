@@ -58,6 +58,9 @@ say "Preparing for Prince";
 
 # Add the cover page and TOC
 
+say "location = " . $src . './index.html';
+say "currdif  = " . getcwd;
+
 my $tree = HTML::TreeBuilder->new( ignore_unknown => 0 );
 # Open source file manually so we're opening it with the UTF8 encoding
 open( my $input_fh, '<:encoding(UTF-8)', $src . './index.html' )
