@@ -32,8 +32,6 @@ GetOptions (
 
 # Quick and dirty say to work out which spec we're rendering
 
-say "CurrDir = " . getcwd;
-
 (my $spec_type)    = read_file('./version.conf') =~ /SPEC_TYPE='(.+?)'/;
 (my $spec_version) = read_file('./version.conf') =~ /SPEC_VERSION='(.+?)'/;
 
