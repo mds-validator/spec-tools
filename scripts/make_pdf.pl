@@ -93,7 +93,9 @@ say "Sending to Prince";
 my $client = SD::PrinceXML::Client->new(
     webservice       => $webservice,
     send_literal_url => 0,
-    url              => 'file://' . $src . '/index_pdf.html'
+    url              => 'file://app/build/singlehtml/index_pdf.html',
+    # TODO url              => 'file://' . $src . '/index_pdf.html'
+
 );
 
 
