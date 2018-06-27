@@ -15,9 +15,14 @@ use DateTime;
 
 use SD::PrinceXML::Client 22;
 
+# TODO All these path issues can be fixed by dockerising
+#  this script.
 
-my $src = dirname( $RealDir ) . '/build/singlehtml';
-my $dst = dirname( $RealDir ) . '/_static';
+#my $src = dirname( $RealDir ) . '/build/singlehtml';
+#my $dst = dirname( $RealDir ) . '/_static';
+
+my $src = './build/singlehtml';
+my $dst = './_static';
 
 GetOptions (
     "webservice=s"  => \my $webservice,
@@ -57,7 +62,7 @@ say "Preparing for Prince";
 
 my $tree = HTML::TreeBuilder->new( ignore_unknown => 0 );
 # Open source file manually so we're opening it with the UTF8 encoding
-open( my $input_fh, '<:encoding(UTF-8)', $src . '/index.html' )
+open( my $input_fh, '<:encoding(UTF-8)', $src . './index.html' )
     || die( "Cannot open HTML file for reading: $!" );
 $tree->parse_file( $input_fh );
 addCover( $tree );
