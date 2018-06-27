@@ -316,6 +316,7 @@ last_year = start_year - 1
 previous_year = str(last_year) + "-" + str((last_year + 1) - 2000)
 due_year = start_year + 2
 copyright = str(start_year) + ", " + author
+download_pdf = "</_static/MHE-" + str(version) + ".pdf>"
 
 rst_epilog = """
 .. |current-year| replace:: %(current_year)s
@@ -336,7 +337,9 @@ rst_epilog = """
 ..
 .. |due-year-bold| replace:: **%(due_year)s**
 ..
-""" % dict(current_year=current_year, start_year=start_year, end_year=end_year, previous_year=previous_year, previous_version=previous_version, due_year=due_year)
+.. |download-pdf| replace:: %(download_pdf)s
+..
+""" % dict(download_pdf=download_pdf, current_year=current_year, start_year=start_year, end_year=end_year, previous_year=previous_year, previous_version=previous_version, due_year=due_year)
 
 numfig = True
 # numfig_secnum_depth = 1
