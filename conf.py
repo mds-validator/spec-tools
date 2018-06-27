@@ -318,6 +318,8 @@ due_year = start_year + 2
 copyright = str(start_year) + ", " + author
 download_pdf = ":download:`PDF </_static/MHE-" + str(version) + ".pdf>`"
 
+print(download_pdf)
+
 rst_epilog = """
 .. |current-year| replace:: %(current_year)s
 ..
