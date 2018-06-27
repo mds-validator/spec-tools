@@ -316,7 +316,7 @@ last_year = start_year - 1
 previous_year = str(last_year) + "-" + str((last_year + 1) - 2000)
 due_year = start_year + 2
 copyright = str(start_year) + ", " + author
-download_pdf = "</_static/MHE-" + str(version) + ".pdf>"
+download_pdf = ":download:`PDF </_static/MHE-" + str(version) + ".pdf>`"
 
 rst_epilog = """
 .. |current-year| replace:: %(current_year)s
