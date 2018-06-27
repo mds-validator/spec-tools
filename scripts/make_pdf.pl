@@ -27,7 +27,7 @@ GetOptions (
 # Quick and dirty say to work out which spec we're rendering
 
 (my $spec_type)    = read_file('/version.conf') =~ /SPEC_TYPE='(.+?)'/;
-(my $spec_version) = read_file('/version.conf') =~ /SPEC_VERSION='(.+?)';
+(my $spec_version) = read_file('/version.conf') =~ /SPEC_VERSION='(.+?)'/;
 
 # (my $spec_type)    = read_file(dirname( $RealDir ).'/version.conf') =~ /SPEC_TYPE='(.+?)'/;
 # (my $spec_version) = read_file(dirname( $RealDir ).'/version.conf') =~ /SPEC_VERSION='(.+?)'/;
