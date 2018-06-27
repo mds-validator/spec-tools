@@ -3,6 +3,7 @@
 use warnings FATAL => 'all';
 use 5.20.0;
 
+use Cwd;
 use HTML::Element;
 use HTML::Entities;
 use File::Basename qw/dirname/;
@@ -26,8 +27,10 @@ GetOptions (
 
 # Quick and dirty say to work out which spec we're rendering
 
-(my $spec_type)    = read_file('/version.conf') =~ /SPEC_TYPE='(.+?)'/;
-(my $spec_version) = read_file('/version.conf') =~ /SPEC_VERSION='(.+?)'/;
+say "CurrDir = " . getcwd;
+
+(my $spec_type)    = read_file('./version.conf') =~ /SPEC_TYPE='(.+?)'/;
+(my $spec_version) = read_file('./version.conf') =~ /SPEC_VERSION='(.+?)'/;
 
 # (my $spec_type)    = read_file(dirname( $RealDir ).'/version.conf') =~ /SPEC_TYPE='(.+?)'/;
 # (my $spec_version) = read_file(dirname( $RealDir ).'/version.conf') =~ /SPEC_VERSION='(.+?)'/;
